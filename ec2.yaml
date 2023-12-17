@@ -81,5 +81,8 @@
           sudo apt install docker.io -y
           sudo systemctl start docker
           sudo systemctl enable docker
+          sudo usermod -aG docker $USER
+          newgrp docker
+          sudo chmod 777 /var/run/docker.sock
           sudo docker run -d --name 2048 -p 3000:3000 mskumar/2048:latest
       register: ec2
