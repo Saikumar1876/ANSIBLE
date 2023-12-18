@@ -76,6 +76,7 @@
         count: "{{ count }}"
         tags: "{{ tag_name }}"
         user_data: |
+        
           #!/bin/bash
           sudo apt update -y
           sudo apt install docker.io -y
